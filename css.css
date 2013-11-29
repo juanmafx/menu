@@ -1,0 +1,47 @@
+
+nav{
+	width:935px;
+	Left: 50%;
+	margin: 0 auto;
+}
+.menue{
+	float: left;
+	text-align: center;
+	color: white;
+	font-size: 18px;
+	padding-top: 24px;
+	padding-right: 12px;
+	padding-bottom: 12px;
+	padding-left: 14px;
+	height: 42px;
+	cursor: pointer;
+}
+header nav a{
+	color:white;
+	text-decoration:none;
+}
+.logodiv{
+	float: left;
+	text-align: center;
+	color: white;
+	font-size: 13px;
+	padding-top: 30px;
+	padding-right: 12px;
+	padding-bottom: 12px;
+	padding-left: 19px;
+	height: 36px;
+	cursor: pointer
+}
+.menue:hover{
+	background:#CCDD77;
+}
+#activo{
+	background:#CCDD77;
+}
+header{
+height: 78px;
+width: 100%;
+background: #BBDB04;
+Left: 50%;
+margin: 0 auto;
+}
