@@ -4,7 +4,7 @@ menu
 Amigo!
 Si deseas crear un menu con PHP que te indique en que parte del sitio web estas, pues estas <strong>en el lugar correcto.</strong>
 
-Estos archivos PHP trabajan MUY MUY BIEN estan testeados y listos para que crees un menu super simple paracto y astuto.
+Estos archivos PHP trabajan MUY MUY BIEN estan testeados y listos para que crees un menu super simple practico y astuto.
 
 Las funciones que utilizaremos estan listas.
 
