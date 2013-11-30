@@ -5,21 +5,20 @@
 <title>Ejemplo de menu dinamico </title>
 <link href="css.css" rel="stylesheet">
 </head>
+<?php
+include 'nav.php';
+?>
+<article>
+<h1>Esto es el INDEX DE LA WEB OSEA EL "HOME"</h1>
+<p>
+En esta parte colocaras tu contenido.<br>
+Ahora bien:
+Remplaza todas los links que dicen EJEMPLO por el URL de tu sitio web.
 
-<?
-function Menu($sitio) {
-$url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
-if(ereg($sitio,$url)) {echo 'id="activo"'; }
-}
- ?>
- 
-<header>
-<nav>
-<div class=menue <?php Menu('http://ejemplo/index.php') ?> 		    <a href="">Home</a>       </div>
-<div class=menue <?php Menu('http://ejemplo/impresiones.php') ?> <a href="">Nosotros</a>   </div>
-<div class=menue <?php Menu('http://ejemplo/contacto.php') ?>    <a href="">Contacto</a>   </div>
-</nav>
-</header>
+</p>
+</article>
+
 
 <body>
+</html>
 </html>
