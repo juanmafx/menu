@@ -1,7 +1,7 @@
 <?
 function Menu($sitio) {
 $url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
-if(ereg($sitio,$url)) {echo 'id="activo"'; }
+if(ereg($sitio,$url)) {echo 'class="activo"'; }
 }
  ?>
 
