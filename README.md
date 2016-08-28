@@ -1,11 +1,12 @@
-menu
+Menu
 ====
 
-<strong>Crear un menu con PHP</strong> que  indica en que parte del sitio web esta el usuario
+<strong>Crea un menu con PHP</strong> que  indica al usuario en  que parte del sitio web esta.
 
-Archivos PHP trabajan MUY MUY BIEN estan testeados y listos para que crees un menu super simple practico y astuto.
 
-LO UNICO QUE TIENES QUE HACER ES REPLAZAR LAS PALABRAS "ejemploaquituweb" POR EL LINK DE TU WEB Y EL MENU ESTA FUNCIONANDO.
+Estos archivos PHP trabajan MUY MUY BIEN estan testeados, listos para que crees un menu o un site mapa dinamico.
+
+LO UNICO QUE TIENES QUE HACER ES REPLAZAR LAS PALABRAS "ejemploaquituweb" POR EL LINK DE TU WEB y activas la funcion.
 
 Este menu te permite cambiar los contenidos en un solo archivo para que los cambios se vean en todas las pestañas de tu sitio.
 --
@@ -16,5 +17,5 @@ Ahora bien, esta listo para que lo utilices.
 Mucha suerte.
 
 Saludos
-Busacame en Fcebook por mas trucos.
 Juan Manuel Ramallo
+
