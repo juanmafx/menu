@@ -1,14 +1,16 @@
 <?
-function Menu($sitio) {
+function Menu($sitio)
+{
 $url = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
-if(ereg($sitio,$url)) {echo 'class="active"'; }
+if(($sitio)== $url) 
+{echo 'class="active"'; }
 }
- ?>
+?>
+ 
+<ul class="nav nav-pills pull-right">
 
-<header>
-<nav>
-<div class=menue <?php  Menu('http://ejemploaquituweb/index.php')     ?>  ><a href="http://ejemploaquituweb/index.php" >Home</a></div>
-<div class=menue <?php  Menu('http://ejemploaquituweb/nosotros.php')  ?>  ><a href="http://ejemploaquituweb/nosotros.php">Nosotros</a>   </div>
-<div class=menue <?php Menu('http://ejemploaquituweb/contacto.php')   ?>  ><a href="http://ejemploaquituweb/contacto.php">Contacto</a>   </div></nav>
-</nav>
-</header>
+<li <?php  Menu('http://ejemplo-aqui-tu-web/index.php')?>> <a href="http://ejemplo-aqui-tu-web" >Home</a>					</li>
+<li <?php  Menu('http://ejemplo-aqui-tu-web/catalogo/index.php')?>>		<a href="http://ejemplo-aqui-tu-web/catalogo">Catalogo</a>		</li>
+<li <?php  Menu('http://ejemplo-aqui-tu-web/contacto/index.php')?>>		<a href="http://ejemplo-aqui-tu-web/contacto/">Contacto</a>			</li>
+
+</ul>
