@@ -5,6 +5,7 @@
 <title>Ejemplo de menu dinamico </title>
 <link href="css.css" rel="stylesheet">
 </head>
+
 <?php
 include 'nav.php';
 ?>

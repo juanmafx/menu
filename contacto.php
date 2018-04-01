@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <meta name="description" content="">
 <title>Contacto</title>
-<link href="css.css" rel="stylesheet">
+<link href="../css.css" rel="stylesheet">
 </head>
 <?php
 include 'nav.php';
