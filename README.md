@@ -111,6 +111,6 @@ See [SECURITY.md](SECURITY.md) and [docs/SECURITY_AUDIT.md](docs/SECURITY_AUDIT.
 
 ## Credits and license
 
-Versions before 2.0.0 bundled Bootstrap 3.0.3 (Apache-2.0) and normalize.css 2.1.3 (MIT) in a single stylesheet. Version 2.0.0 replaces it with a purpose-written stylesheet, and the original remains in git history with its notices.
+Versions before 2.0.0 bundled Bootstrap 3.0.3 (Apache-2.0) and normalize.css 2.1.3 (MIT) in a single stylesheet. Version 2.0.0 replaced it with a purpose-written stylesheet.
 
 This repository has no license file, so default copyright applies.

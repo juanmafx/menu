@@ -26,7 +26,7 @@
 | File inclusion | Template names come from validated configuration |
 | Unsafe `eval` | Not used |
 | Weak hashing | No hashing or stored credentials |
-| Hardcoded secrets | None found by gitleaks in tracked files or branch history |
+| Hardcoded secrets | None found by gitleaks in tracked files or branch history. On 2026-11-24 the public history was rewritten to keep only the 2026 modernization commits; any secret that was ever published must still be treated as compromised |
 | Dependencies | No runtime dependencies; `composer audit` reported no advisories for development dependencies |
 
 ## Open items

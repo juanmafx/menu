@@ -1,24 +1,16 @@
-# Release Notes: 2.0.0
+# Release Notes: 2.0.1
 
-Status: prepared, not yet tagged or released.
+Version 2.0.1 is a documentation-only release. It contains no code behaviour change from 2.0.0.
 
-Version 2.0.0 rebuilds the original 2013 PHP menu as a small, typed, tested application while keeping its core idea: one menu shared by every page, with the current page highlighted automatically.
+## Changes
 
-## Highlights
+- The release notes no longer describe 2.0.0 as unreleased.
+- The credits no longer state that the stylesheet from versions before 2.0.0 remains in the repository history. On 2026-11-24 the public history was rewritten to keep only the 2026 modernization commits.
+- The security audit records the history rewrite.
 
-- Separate `backend/` and `frontend/` structure with a dedicated web root.
-- Menu, routes, and page metadata defined in one configuration file.
-- Security headers on PHP responses, generic error pages, and allowlisted routing.
-- Accessible, responsive markup with no third-party CSS or JavaScript.
-- Automated tests, static analysis, and a least-privilege CI workflow.
+## Upgrading
 
-## Upgrade notes
-
-1. Install PHP 8.4 or newer.
-2. Point the web server at `frontend/public` and route requests to `index.php`.
-3. Move page content into `frontend/templates/pages/`.
-4. Declare pages in `backend/config/pages.php`.
-5. Update inbound links to `/`, `/about`, and `/contact`.
+No action is needed when upgrading from 2.0.0. For the changes introduced in 2.0.0, see [CHANGELOG.md](CHANGELOG.md).
 
 ## Verification
 
