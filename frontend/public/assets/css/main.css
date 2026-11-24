@@ -1,0 +1,76 @@
+:root {
+  color-scheme: light dark;
+  --surface: #ffffff;
+  --text: #1f2933;
+  --muted: #d9e2ec;
+  --accent: #0b5cad;
+  --on-accent: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #14191f;
+    --text: #e4e9ef;
+    --muted: #2c3640;
+    --accent: #6cb2f7;
+    --on-accent: #0b1520;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.site-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  border-bottom: 1px solid var(--muted);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background: var(--muted);
+}
+
+.menu a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.menu .active a {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.content {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}

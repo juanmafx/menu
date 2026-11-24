@@ -1,0 +1,34 @@
+{
+    "name": "juanmafx/menu",
+    "description": "Dependency-free PHP site shell with one shared navigation menu and automatic active-page highlighting.",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Menu\\": "backend/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Menu\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "8.4.0"
+        },
+        "sort-packages": true,
+        "allow-plugins": false
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --no-progress"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2",
+        "phpunit/phpunit": "^12"
+    }
+}

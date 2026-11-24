@@ -1,0 +1,7 @@
+parameters:
+    level: 5
+    tmpDir: .phpstan.cache
+    paths:
+        - backend/src
+        - backend/config
+        - tests

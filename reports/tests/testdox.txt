@@ -1,0 +1,66 @@
+Application (Menu\Tests\Unit\Application)
+ [x] Highlights exactly the current page with data set "home"
+ [x] Highlights exactly the current page with data set "about"
+ [x] Highlights exactly the current page with data set "contact"
+ [x] Unknown path returns not found without reflecting input
+ [x] Rejects unsupported method
+ [x] Head request has no body
+ [x] Escapes configured labels
+ [x] Render failure returns generic error
+ [x] Every response carries security headers
+
+Html (Menu\Tests\Unit\Html)
+ [x] Escapes markup and quotes
+ [x] Substitutes invalid utf 8
+
+Http Server (Menu\Tests\Integration\HttpServer)
+ [x] Routes with data set "home"
+ [x] Routes with data set "about"
+ [x] Routes with data set "contact with slash"
+ [x] Routes with data set "unknown"
+ [x] Routes with data set "source file is not served"
+ [x] Routes with data set "encoded null byte"
+ [x] Routes with data set "encoded traversal"
+ [x] Serves stylesheet
+ [x] Active entry follows the request
+ [x] Host header is not reflected
+ [x] Sends security headers and hides runtime
+ [x] Rejects post
+
+Menu (Menu\Tests\Unit\Menu)
+ [x] Keeps configured order
+ [x] Finds page by exact path
+ [x] Marks only the current page active
+ [x] Rejects duplicate paths
+ [x] Rejects unnormalized page path
+ [x] Rejects template name with traversal
+
+Path Normalizer (Menu\Tests\Unit\PathNormalizer)
+ [x] Normalizes request uris with data set "root"
+ [x] Normalizes request uris with data set "empty"
+ [x] Normalizes request uris with data set "query only"
+ [x] Normalizes request uris with data set "front controller"
+ [x] Normalizes request uris with data set "plain path"
+ [x] Normalizes request uris with data set "trailing slash"
+ [x] Normalizes request uris with data set "query string"
+ [x] Normalizes request uris with data set "fragment"
+ [x] Normalizes request uris with data set "duplicate slashes"
+ [x] Normalizes request uris with data set "nested front controller"
+ [x] Normalizes request uris with data set "encoded traversal stays literal"
+
+Request (Menu\Tests\Unit\Request)
+ [x] Builds from server values
+ [x] Defaults when server values are missing
+ [x] Treats https off as insecure
+ [x] Sends hsts only over https
+
+Template Renderer (Menu\Tests\Unit\TemplateRenderer)
+ [x] Renders variables
+ [x] Rejects invalid template names with data set "parent traversal"
+ [x] Rejects invalid template names with data set "absolute path"
+ [x] Rejects invalid template names with data set "extension"
+ [x] Rejects invalid template names with data set "null byte"
+ [x] Rejects invalid template names with data set "empty"
+ [x] Fails on missing template
+ [x] Discards partial output when template throws
+
