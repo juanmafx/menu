@@ -1,6 +1,6 @@
 # Release Notes: 2.0.0
 
-Status: prepared and not yet tagged or published.
+Status: prepared, not yet tagged or released.
 
 Version 2.0.0 rebuilds the original 2013 PHP menu as a small, typed, tested application while keeping its core idea: one menu shared by every page, with the current page highlighted automatically.
 
@@ -8,7 +8,7 @@ Version 2.0.0 rebuilds the original 2013 PHP menu as a small, typed, tested appl
 
 - Separate `backend/` and `frontend/` structure with a dedicated web root.
 - Menu, routes, and page metadata defined in one configuration file.
-- Strict security headers, safe error handling, and allowlisted routing.
+- Security headers on PHP responses, generic error pages, and allowlisted routing.
 - Accessible, responsive markup with no third-party CSS or JavaScript.
 - Automated tests, static analysis, and a least-privilege CI workflow.
 

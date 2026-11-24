@@ -17,6 +17,7 @@ Http Server (Menu\Tests\Integration\HttpServer)
  [x] Routes with data set "home"
  [x] Routes with data set "about"
  [x] Routes with data set "contact with slash"
+ [x] Routes with data set "absolute-form target"
  [x] Routes with data set "unknown"
  [x] Routes with data set "source file is not served"
  [x] Routes with data set "encoded null byte"
@@ -47,12 +48,16 @@ Path Normalizer (Menu\Tests\Unit\PathNormalizer)
  [x] Normalizes request uris with data set "duplicate slashes"
  [x] Normalizes request uris with data set "nested front controller"
  [x] Normalizes request uris with data set "encoded traversal stays literal"
+ [x] Normalizes request uris with data set "absolute form"
+ [x] Normalizes request uris with data set "absolute form without path"
+ [x] Normalizes request uris with data set "scheme inside path stays literal"
 
 Request (Menu\Tests\Unit\Request)
  [x] Builds from server values
  [x] Defaults when server values are missing
  [x] Treats https off as insecure
  [x] Sends hsts only over https
+ [x] Hsts does not cover subdomains
 
 Template Renderer (Menu\Tests\Unit\TemplateRenderer)
  [x] Renders variables

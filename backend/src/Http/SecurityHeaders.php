@@ -21,7 +21,7 @@ final class SecurityHeaders
         ];
 
         if ($request->isSecure) {
-            $headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains';
+            $headers['Strict-Transport-Security'] = 'max-age=31536000';
         }
 
         return $headers;

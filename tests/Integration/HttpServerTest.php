@@ -56,6 +56,7 @@ final class HttpServerTest extends TestCase
             'home' => ['/', 200],
             'about' => ['/about', 200],
             'contact with slash' => ['/contact/', 200],
+            'absolute-form target' => ['http://127.0.0.1/about', 200],
             'unknown' => ['/missing', 404],
             'source file is not served' => ['/backend/config/pages.php', 404],
             'encoded null byte' => ['/assets/%00', 404],

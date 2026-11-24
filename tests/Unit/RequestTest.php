@@ -38,4 +38,9 @@ final class RequestTest extends TestCase
         self::assertArrayNotHasKey('Strict-Transport-Security', SecurityHeaders::for(new Request('GET', '/')));
         self::assertArrayHasKey('Strict-Transport-Security', SecurityHeaders::for(new Request('GET', '/', true)));
     }
+
+    public function testHstsDoesNotCoverSubdomains(): void
+    {
+        self::assertSame('max-age=31536000', SecurityHeaders::for(new Request('GET', '/', true))['Strict-Transport-Security']);
+    }
 }

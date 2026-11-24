@@ -24,6 +24,9 @@ final class PathNormalizerTest extends TestCase
             'duplicate slashes' => ['//about///', '/about'],
             'nested front controller' => ['/about/index.php', '/about'],
             'encoded traversal stays literal' => ['/%2e%2e/secret', '/%2e%2e/secret'],
+            'absolute form' => ['http://example.test/about?ref=x', '/about'],
+            'absolute form without path' => ['https://example.test', '/'],
+            'scheme inside path stays literal' => ['/http://example.test/about', '/http:/example.test/about'],
         ];
     }
 

@@ -9,6 +9,7 @@ final class PathNormalizer
     public static function normalize(string $requestUri): string
     {
         $path = substr($requestUri, 0, strcspn($requestUri, '?#'));
+        $path = (string) preg_replace('#\A[a-z][a-z0-9+.-]*://[^/]*#i', '', $path);
         $path = '/' . ltrim((string) preg_replace('#/+#', '/', $path), '/');
         if (str_ends_with($path, '/index.php')) {
             $path = substr($path, 0, -strlen('index.php'));

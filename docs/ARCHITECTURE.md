@@ -51,22 +51,26 @@ tests/Integration/           HTTP tests against a real local server
 | Compare paths instead of full URLs | The result no longer depends on the client-controlled `Host` header |
 | Exact-match route allowlist | Request input cannot choose a file to include |
 | Configuration instead of a database | A static menu does not justify a runtime data store |
-| Separate web root | Source, configuration, and tests are not reachable over HTTP |
+| Separate web root | With `frontend/public` as the web root, source, configuration, and tests are not reachable over HTTP |
 | No JavaScript | Allows a strict Content Security Policy and keeps the page light |
 | No framework | The domain is small enough that a framework would outweigh it |
 
 ## Recommended deployment
 
-Serve `frontend/public` over HTTPS through a web server and PHP-FPM. Example nginx configuration, which has not been run as part of this project:
+Serve `frontend/public` over HTTPS through a web server and PHP-FPM. In the example nginx configuration below, syntax and static asset handling were checked on nginx, but the PHP-FPM path has not been run:
 
 ```nginx
 server {
     listen 443 ssl;
     http2 on;
     server_name example.com;
+    ssl_certificate /etc/ssl/menu/fullchain.pem;
+    ssl_certificate_key /etc/ssl/menu/privkey.pem;
     root /srv/menu/frontend/public;
 
     location /assets/ {
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Cross-Origin-Resource-Policy "same-origin" always;
         try_files $uri =404;
     }
 
@@ -79,8 +83,8 @@ server {
 }
 ```
 
-Static assets served directly by the web server do not pass through the PHP security headers, so add equivalent headers there.
+Static assets served directly by the web server do not pass through the PHP security headers, so the example sets the two that apply to them.
 
 ## Optional persistence
 
-`db/schema.sql` defines a `menu_items` table that mirrors the `Page` definition. To adopt it, implement a loader that returns `Page` objects and pass them to `Menu`. The rest of the application would not change.
+`db/schema.sql` defines a `menu_items` table that stores the `Page` fields plus sort order, visibility, and timestamps. To adopt it, implement a loader that returns visible rows in `sort_order` as `Page` objects and pass them to `Menu`. The rest of the application would not change.

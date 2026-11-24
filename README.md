@@ -16,7 +16,7 @@ It began in 2013 as a personal learning exercise in reusing a PHP include to bui
 
 - Renders Home, About, and Contact pages inside a shared layout.
 - Marks the current entry with `class="active"` and `aria-current="page"`.
-- Normalizes trailing slashes, duplicate slashes, query strings, fragments, and `index.php`.
+- Normalizes absolute-form request targets, trailing slashes, duplicate slashes, query strings, fragments, and `index.php`.
 - Answers unknown paths with a 404 page that never reflects the input.
 - Accepts only `GET` and `HEAD`, and answers other methods with 405.
 - Sends a restrictive Content Security Policy and related security headers.
@@ -69,14 +69,14 @@ The menu, route, and active state all follow from that entry. Menu order is the 
 | Setting | Location | Notes |
 | --- | --- | --- |
 | Pages and menu order | `backend/config/pages.php` | Paths must be normalized and unique |
-| Security headers | `backend/src/Http/SecurityHeaders.php` | HSTS is sent only over HTTPS |
+| Security headers | `backend/src/Http/SecurityHeaders.php` | HSTS is sent only over HTTPS and does not cover subdomains |
 | Styling | `frontend/public/assets/css/main.css` | Follows the system light or dark preference |
 
 There are no environment variables or secrets. The site expects to be served from the root of its host.
 
 ## Database
 
-The application does **not** use a database. [db/schema.sql](db/schema.sql) is an optional starting point for storing menu entries if you outgrow the configuration file. Nothing reads it at runtime.
+The application does **not** use a database. [db/schema.sql](db/schema.sql) is an optional starting point for storing menu entries if you outgrow the configuration file. Nothing reads it at runtime. It has been executed on SQLite 3.46, PostgreSQL 17, and MySQL 8.4.
 
 ```sh
 python3 scripts/verify_schema.py db/schema.sql
@@ -103,8 +103,8 @@ docker run --rm --network none --user "$(id -u):$(id -g)" -v "$PWD:/app" -w /app
 
 ## Security notes
 
-- Output is escaped through a single helper, and routes come from an allowlist.
-- Request input never selects a file, and the `Host` header is not used.
+- Configured values are escaped through a single helper, and routes come from an allowlist.
+- Request input never selects a PHP file or template, and the `Host` header is not used.
 - The policy blocks scripts, framing, and form submissions.
 
 See [SECURITY.md](SECURITY.md) and [docs/SECURITY_AUDIT.md](docs/SECURITY_AUDIT.md).

@@ -34,6 +34,6 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Removed the end-of-life Bootstrap 3.0.3 stylesheet.
 - Moved source files out of the web root.
 
-## [1.x] - 2013
+## Before 2.0.0 (2013-2018)
 
 - Original PHP include-based menu with an active class.

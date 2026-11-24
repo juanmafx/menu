@@ -27,7 +27,7 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: dom, mbstring, xml, xmlwriter
           coverage: none
-          tools: none
+          tools: composer:v2
       - run: composer validate --strict
       - run: composer install --no-interaction --no-progress --no-scripts --no-plugins --prefer-dist
       - run: composer audit --no-plugins
