@@ -1,4 +1,4 @@
-# menu
+# php-active-menu
 
 A small, dependency-free PHP site shell in which every page shares one navigation menu, and the entry for the current page is highlighted automatically.
 
